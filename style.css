@@ -6,7 +6,7 @@
 html, body {
   background-color: var(--page-bg-color);
   color: var(--page-text-color);
-
+  <!-- box-sizing: border-box; -->
   height: 100%;
   margin: 10px 0 0;
   font-size: 100%;
@@ -14,8 +14,6 @@ html, body {
 
 .container > * {
   display: flex;
-
-
   align-items: center;
   justify-content: center;
   font-size: 2em;
@@ -25,16 +23,15 @@ html, body {
 
 }
 
-nav {
-
-}
-
 #banner {
-background-color: gray;
+  word-spacing: 20px;
+  font-family: 'Yellowtail', cursive;
+  text-shadow: 5px 5px 10px blue;
+  font-size: 70px;
+background-color: #3297db;
 }
 
 #about {
-
 }
 
 #experience {
@@ -46,7 +43,7 @@ background-color: gray;
 }
 
 #contact {
-background-color: gray;
+background-color: #3297db;
 }
 
 footer {
