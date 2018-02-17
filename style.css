@@ -6,7 +6,7 @@
 html, body {
   background-color: var(--page-bg-color);
   color: var(--page-text-color);
-  <!-- box-sizing: border-box; -->
+  box-sizing: border-box;
   height: 100%;
   margin: 10px 0 0;
   font-size: 100%;
@@ -28,7 +28,7 @@ html, body {
   font-family: 'Yellowtail', cursive;
   text-shadow: 5px 5px 10px blue;
   font-size: 70px;
-background-color: #3297db;
+  background-color: #8290ff;
 }
 
 #about {
@@ -46,6 +46,177 @@ background-color: gray;
 background-color: #3297db;
 }
 
+#idk {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+#quiensabe {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    font-weight: bold;
+    position: relative;
+    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 5s infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+#div1 {-webkit-animation-timing-function: linear;}
+#div2 {-webkit-animation-timing-function: ease;}
+#div3 {-webkit-animation-timing-function: ease-in;}
+#div4 {-webkit-animation-timing-function: ease-out;}
+#div5 {-webkit-animation-timing-function: ease-in-out;}
+
+/* Standard syntax */
+#div1 {animation-timing-function: linear;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+body {
+    background-color: #F5F5F5;
+    color: #555;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+}
+.note {
+  width: 600px;
+  margin: 30px auto;
+}
+
+.element {
+  background-color: #597df2;
+  color: white;
+  width: 500px;
+  height: 500px;
+  margin: 30px auto;
+  text-align: justify;
+  shape-inside: polygon(250px 0, 350px 170px, 500px 180px, 380px 320px, 450px 500px, 250px 420px, 50px 500px, 120px 320px, 0px 180px, 150px 170px );
+  shape-padding: 10px;
+  transition: all 3s ease;
+  -webkit-clip-path: polygon(250px 0, 350px 170px, 500px 180px, 380px 320px, 450px 500px, 250px 420px, 50px 500px, 120px 320px, 0px 180px, 150px 170px );
+}
+.element:hover{
+   shape-inside: polygon(250px 0, 500px 0, 500px 180px, 500px 320px, 500px 500px, 250px 500px, 0 500px, 0 320px, 0 180px, 0 0);
+  -webkit-clip-path: polygon(250px 0, 500px 0, 500px 180px, 500px 320px, 500px 500px, 250px 500px, 0 500px, 0 320px, 0 180px, 0 0);
+}
+
+
+html, body {
+  background: #333;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.svg-wrapper {
+  height: 60px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: #19f6e8;
+}
+
+.text {
+  color: #fff;
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -48px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 12px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 8px;
+  }
+}
+
+.svg-wrapper:hover .shape {
+  -webkit-animation: 0.3s draw linear forwards;
+  animation: 0.3s draw linear forwards;
+}
+
+
+
+
+
+/* p {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+*/ 
 footer {
 
 }
